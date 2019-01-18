@@ -6,7 +6,12 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'main.js'
+        filename: 'main.js',
+        publicPath: '/public/', 
+    },
+    devServer: {
+        historyApiFallback: true,
+        overlay: true
     },
     plugins: [
         new VueLoaderPlugin()
